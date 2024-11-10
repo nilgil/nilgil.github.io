@@ -1,8 +1,18 @@
-title: Just the Docs Template
-description: A starter template for a Jeykll site using the Just the Docs theme!
+title: nilgil's Wiki
+description: daily updated wiki
 theme: just-the-docs
 
-url: https://just-the-docs.github.io
+url: https://wiki.nilgil.com
 
-aux_links:
-  Template Repository: https://github.com/just-the-docs/just-the-docs-template
+favicon_ico: "/assets/images/favicon.ico"
+color_scheme: dark
+
+plugins:
+  - jekyll-default-layout
+  - jekyll-sitemap
+
+nav_external_links:
+  - title: GitHub
+    url: https://github.com/nilgil
+    hide_icon: false # set to true to hide the external link icon - defaults to false
+    opens_in_new_tab: true # set to true to open this link in a new tab - defaults to false
