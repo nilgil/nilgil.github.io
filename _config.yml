@@ -9,7 +9,6 @@ color_scheme: dark
 plugins:
   - jekyll-default-layout
   - jekyll-sitemap
-  - jekyll-last-modified-at
   - jekyll-seo-tag
   - jekyll-include-cache
 

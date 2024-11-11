@@ -8,7 +8,10 @@ description: "홈페이지 설명"
 
 ## 최근 업데이트
 
-{% assign docs = site.pages | where_exp: "item", "item.path contains 'docs/'" | sort: "last_modified_at" | reverse %}
+{% assign docs = site.pages |
+where_exp: "item", "item.path contains 'docs/'" |
+where_exp: "item", "item.last_modified_at" |
+sort: "last_modified_at" | reverse %}
 
 <div class="recent-docs">
   {% for doc in docs %}
