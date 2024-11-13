@@ -32,6 +32,19 @@ a {
   margin-right: 0.5rem;
 }
 
-.label-grey {
-  color: gray;
+.label-grey:not(g) {
+  background-color: gray;
 }
+
+.label-custom-sky:not(g) {
+  background-color: #4487b1;
+}
+
+.label-custom-green:not(g) {
+  background-color: #638e54;
+}
+
+.label-custom-khaki:not(g) {
+  background-color: #9c8345;
+}
+

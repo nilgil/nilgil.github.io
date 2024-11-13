@@ -1,10 +1,7 @@
 ---
 title: Home
 nav_order: 1
-description: "홈페이지 설명"
 ---
-
-# __Daily Update Wiki__
 
 ## 최근 업데이트
 
@@ -18,7 +15,18 @@ sort: "last_modified_at" | reverse %}
     {% unless doc.path contains 'assets' or doc.path contains '.scss' %}
     {% assign path_parts = doc.path | split: '/' %}
     {% if path_parts.size >= 3 %}
-      {% assign top_category = path_parts[1] | capitalize %}
+      {% assign top_categories = "" | split: ',' %}
+      {% assign sub_categories = "" | split: ',' %}
+      {% assign last_index = path_parts.size | minus: 2 %}
+      {% for i in (1..last_index) %}
+        {% assign category = path_parts[i] | capitalize %}
+        {% if i == 1 %}
+            {% assign top_categories = top_categories | push: category %}
+        {% endif %}
+        {% if i == 2 %}
+            {% assign sub_categories = sub_categories | push: category %}
+        {% endif %}
+      {% endfor %}
     {% endif %}
     <div class="doc-entry">
       <div class="doc-title">
@@ -27,8 +35,13 @@ sort: "last_modified_at" | reverse %}
         </a>
       </div>
       <div class="doc-meta">
-        <span class="label label-blue">수정일: {{ doc.last_modified_at | date: "%Y-%m-%d" }}</span>
-        <span class="label label-green">{{ top_category }}</span>
+        <span class="label label-grey">수정일: {{ doc.last_modified_at | date: "%Y-%m-%d" }}</span>
+        {% for category in top_categories %}
+          <span class="label label-custom-sky">{{ category }}</span>
+        {% endfor %}
+        {% for category in sub_categories %}
+          <span class="label label-custom-green">{{ category }}</span>
+        {% endfor %}
       </div>
     </div>
     {% endunless %}
