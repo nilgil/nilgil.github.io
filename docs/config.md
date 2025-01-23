@@ -175,7 +175,7 @@ and the `paginate_path` needs to match the path to the `index.html` file.
 To match the `paginate_path` above, put a `index.html` with the following front matter in the root directory:
 
 ~~~yml
-# file: `index.html`
+# file: `index.md`
 ---
 layout: blog
 title: Blog
@@ -197,7 +197,7 @@ If you want to use the blog layout at a URL like `/my-blog/`, create the followi
 You can use the same `index.html` as before and place it in the subdirectory.
 
 ~~~yml
-# file: `my-blog/index.html`
+# file: `my-blog/index.md`
 ---
 layout: blog
 title: Blog
