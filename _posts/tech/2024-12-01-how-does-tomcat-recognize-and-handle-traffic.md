@@ -2,10 +2,9 @@
 layout: post
 title: 톰캣은 어떻게 트래픽을 인지하고 처리하는 걸까?
 description: NIO Connector 코드 분석
-img: /assets/img/blog/20241201/tomcat.jpg
-tags: [ Server, Tomcat, Connector, NioConnector, Acceptor, Poller, WAS, 서버, 톰캣, 네트워크, 커넥터, 트래픽]
+image: /assets/img/blog/20241201/tomcat.png
 hide_last_modified: true
-hide_tags: true
+tags: [ Server ]
 ---
 
 스프링 부트를 사용할 때 별다른 설정을 하지 않으면 자동으로 톰캣을 WAS로 사용합니다.
@@ -25,10 +24,12 @@ NIO2 Connector는 대량의 비동기 처리가 필요한 경우, AJP Connector�
 참고로 NIO Connector의 처리량으로 충분한 경우가 대부분이라고 합니다.
 
 ![](/assets/img/blog/20241201/img-1.png)
-<small>기본값이 NIO</small>
+기본값이 NIO
+{:.figcaption}
 
 ![](/assets/img/blog/20241201/img-2.png)
-<small>해당 프로토콜로 Connector 생성</small>
+해당 프로토콜로 Connector 생성
+{:.figcaption}
 
 만약 NIO2 Connector나 AJP Connector를 사용하고 싶다면 다음과 같이 프로토콜 값을 수정하여 적용할 수 있습니다.
 
@@ -55,12 +56,15 @@ Connector 구현체는 하나지만 각 Connector 종류에 따라 다른 Protoc
 NIO Connector의 경우 위 기본값으로 사용된 `org.apache.coyote.http11.Http11NioProtocol` 인스턴스를 만들어 ProtocolHandler로 사용합니다.
 
 ![](/assets/img/blog/20241201/img-3.png)
-<small>ProtocolHandler 인스턴스 생성</small>
+ProtocolHandler 인스턴스 생성
+{:.figcaption}
 
 그런데 우리는 여기서 Http11NioProtocol의 생성자에서 생성하는 NioEndpoint 인스턴스에 주목해야 합니다.
 
 ![](/assets/img/blog/20241201/img-4.png)
-<small>NioEndpoint 인스턴스 생성</small>
+NioEndpoint 인스턴스 생성
+{:.figcaption}
+
 
 이 NioEndpoint가 실제로 네트워크 수준의 소켓 통신(연결 수락, 데이터 읽기/쓰기)을 관리하기 때문입니다.
 
@@ -73,12 +77,14 @@ NioEndpoint의 초기화 작업 중 initServerSocket()이라는 함수를 호출
 커널에 Socket을 생성하고, 해당 소켓을 서버 포트에 바인딩(Bind)시키고, Listen 상태로 만듭니다.
 
 ![](/assets/img/blog/20241201/img-5.png)
-<small>JNI 호출하여 시스템 콜 socket 호출</small>
+JNI 호출하여 시스템 콜 socket 호출
+{:.figcaption}
 
 ![](/assets/img/blog/20241201/img-6.png)
 
 ![](/assets/img/blog/20241201/img-7.png)
-<small>JNI 호출하여 시스템 콜 bind, listen 호출</small>
+JNI 호출하여 시스템 콜 bind, listen 호출
+{:.figcaption}
 
 ## Listening Socket
 
@@ -104,10 +110,14 @@ Listening Socket에는 클라이언트의 연결 요청을 관리하는 Backlog 
 Accept Queue에 쌓인 3way-handshake가 완료된 연결을 수락합니다.
 
 ![](/assets/img/blog/20241201/img-10.png)
-<small>serverSock.accept()를 타고 들어가보면 JNI인 accept를 호출</small>
+
+serverSock.accept()를 타고 들어가보면 JNI인 accept를 호출
+{:.figcaption}
 
 ![](/assets/img/blog/20241201/img-11.png)
-<small>JNI를 호출하여 시스템 콜 accept 호출</small>
+
+JNI를 호출하여 시스템 콜 accept 호출
+{:.figcaption}
 
 accept 시스템 콜을 호출하면 커널은 해당 연결이 앞으로 데이터를 주고받는 데 사용할 소켓을 생성합니다.
 이후 해당 연결은 타임아웃으로 만료되기 전까지는 3way-handshake를 다시 수행하지 않고 해당 소켓을 통해 바로 데이터를 주고받게 됩니다.
@@ -118,12 +128,15 @@ accept 시스템 콜을 호출하면 커널은 해당 연결이 앞으로 데이
 Blocking 상태가 되어 루프가 돌지 않고 해당 호출에서 멈추게 된다는 것을 알게 되었습니다.
 
 ![](/assets/img/blog/20241201/img-12.png)
-<small>endpoint.serverSocketAccept()를 타고 들어가면 accept 시스템 콜을 호출</small>
+
+endpoint.serverSocketAccept()를 타고 들어가면 accept 시스템 콜을 호출
+{:.figcaption}
 
 accept 콜 이후 Acceptor는 생성된 소켓의 등록 이벤트를 톰캣의 또 다른 데몬 스레드인 Poller에 추가한 뒤 한 번의 루프를 종료합니다.
 
 ![](/assets/img/blog/20241201/img-13.png)
-<small>Acceptor 루프 흐름</small>
+Acceptor 루프 흐름
+{:.figcaption}
 
 ## Poller
 
@@ -132,7 +145,8 @@ Poller는 루프를 돌며 Acceptor가 추가한 소켓 등록 이벤트를 읽�
 여기서 Selector는 여러 소켓의 상태 변화를 관리하는 역할을 합니다.
 
 ![](/assets/img/blog/20241201/img-14.png)
-<small>Acceptor가 추가한 소켓 등록 이벤트에서 SocketChannel 추출하여 Selector에 등록</small>
+Acceptor가 추가한 소켓 등록 이벤트에서 SocketChannel 추출하여 Selector에 등록
+{:.figcaption}
 
 또한 루프 내에서 Selector의 select()를 호출하여 상태 변화를 감지하는 시스템 콜을 호출합니다.
 운영체제마다 Selector의 구현체가 다르며 리눅스는 epoll, 맥은 kqueue와 같은 시스템 콜을 사용합니다.
@@ -156,13 +170,16 @@ Executor는 소켓에서 데이터를 읽고, HTTP 요청을 파싱하는 등의
 그리고 응답을 다시 소켓에 입력하는 것까지의 역할을 수행한 뒤 스레드 풀에 반환되어 다음 작업을 대기합니다.
 
 ![](/assets/img/blog/20241201/img-17.png)
-<small>소켓 데이터 읽기</small>
+소켓 데이터 읽기
+{:.figcaption}
 
 ![](/assets/img/blog/20241201/img-18.png)
-<small>헤더 파싱</small>
+헤더 파싱
+{:.figcaption}
 
 ![](/assets/img/blog/20241201/img-19.png)
-<small>서블릿 컨테이너에 전달</small>
+서블릿 컨테이너에 전달
+{:.figcaption}
 
 ## 느낀 점
 

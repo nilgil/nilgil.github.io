@@ -52,8 +52,8 @@ author:
 menu:
   - title:             Blog
     url:               /blog/
-  - title:             Wiki
-    url:               /wiki/
+  - title:             Projects
+    url:               /projects/
   - title:             About
     url:               /about/
 
@@ -71,7 +71,7 @@ menu:
 copyright:             © 2025. All rights reserved.
 
 # Format of the permalinks
-permalink:             /:categories/:title/
+permalink:             /blog/:categories/:title/
 
 # Pagination configuration (used by the `blog` layout)
 paginate:              10
@@ -126,14 +126,6 @@ font_code:             Nanum Gothic Coding, Fira Code, Menlo, Monaco, Consolas, 
 defaults:
   # You can use this to provide a default accent color and background for
   # all pages under a given path:
-  - scope:
-      path:            hyde/
-    values:
-      accent_color:    rgb(38,139,210)
-      theme_color:     rgb(32,32,32)
-      accent_image:
-        background:    rgb(32,32,32)
-        overlay:       false
 
   # Don't include documents in assets in the sitemap
   - scope:
@@ -289,11 +281,11 @@ hydejack:
 
 collections:
   featured_categories:
-    permalink:         /:name/
+    permalink:         /blog/:name/
     output:            true
 
   featured_tags:
-    permalink:         /tag-:name/
+    permalink:         /tags/:name/
     output:            true
 
   projects:
@@ -318,7 +310,7 @@ include:
   - _routes.json
   - .well-known
   - LICENSE.md
-
+  - _pages
 
 # Plugins
 # ----------------------------------------------------------------------------------------
