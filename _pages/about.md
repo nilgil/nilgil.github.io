@@ -5,4 +5,4 @@ image: /assets/img/logo.png
 permalink: /about
 ---
 
-## Software Engineer in Seoul
+Software Engineer in Seoul

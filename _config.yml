@@ -189,7 +189,7 @@ hydejack:
   no_push_state:       false
 
   # Set to `true` if you want to disable the drawer
-  no_drawer:           false
+  no_drawer:           true
 
   # Set to `true` if you don't to use the auto-hiding (JavaScript based) navbar.
   # Note that this will not hide the navbar completely, only replace it with a static one.
@@ -203,7 +203,7 @@ hydejack:
 
   # Set to `true` if you do not want parts of the css inlined in <head/>
   # This will increase site build speed dramatically!
-  no_inline_css:       false
+  no_inline_css:       true
 
   # Set to `true` if you don't intend on changing the accent color on a per-page basis. 
   # This will increase site build speed!
@@ -222,11 +222,11 @@ hydejack:
   no_third_column:     false
 
   # Set to `true` if you don't like oversized headlines on large screens.
-  no_large_headings:   false
+  no_large_headings:   true
 
   # Set to `true` if you do not want to expose your resume and projects
   # in machine-readable formats.
-  no_structured_data:  false
+  no_structured_data:  true
 
   # You can set this to `true` if you don't want to set the `theme-color` meta tag,
   # This only affects the meta tag, not the color specified in the app manifest.
@@ -253,7 +253,7 @@ hydejack:
   hide_dates:          false
 
   # Similarly, showing last modified date can devalue a post if it is too far in the past.
-  hide_last_modified:  false
+  hide_last_modified:  true
 
   # Note that dark mode only works in the PRO version of Hydejack.
   dark_mode:
@@ -374,8 +374,8 @@ relative_links:
   collections:         true
 
 titles_from_headings:
-  strip_title:         true
-  collections:         true
+  strip_title:         false
+  collections:         false
 
 compress_html:
   comments:            ["<!--", "-->"]
@@ -394,16 +394,14 @@ jekyll_compose:
   default_front_matter:
     drafts:
       layout: post
-      description: > 
-        A short ~160 character description of your post for search engines,
-        social media previews, etc.
+      description: >
+        nilgil's posts
       image:
         path: /assets/img/sidebar-bg.jpg
     posts:
       layout: post
       description: > 
-        A short ~160 character description of your post for search engines,
-        social media previews, etc.
+        nilgil's posts
       image:
         path: /assets/img/sidebar-bg.jpg
     projects:

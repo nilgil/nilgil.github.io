@@ -1,15 +1,16 @@
 ---
 layout: grid
 title: Blog
-no_groups: true
 permalink: /blog
+no_groups: true
 ---
 
-|        Category         |
-|:-----------------------:|
-|   [Java](/blog/java/)   |
-|    -----------------    |
-| [Spring](/blog/spring/) |
-|    -----------------    |
-| [Server](/blog/server/) |
-|    -----------------    | 
+## Tags
+
+<div>
+    {% for tag in site.tags %}
+    <a href="/tags/{{ tag[0] | slugify }}" class="post-tag"><strong>{{ tag[0] | capitalize }}</strong></a>
+    {% endfor %}
+</div>
+
+## Posts

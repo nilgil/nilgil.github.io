@@ -1,7 +1,11 @@
 ---
-layout: home
+layout: welcome
 title: Home
-cover:  true
-posts_page: /blog
 permalink: /
 ---
+
+## Recent Posts
+<!--posts-->
+
+## Projects
+<!--projects-->
