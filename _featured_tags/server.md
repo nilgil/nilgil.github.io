@@ -1,6 +1,6 @@
 ---
 layout: grid
 title: Server
-slug: server
+slug: Server
 no_groups: true
 ---

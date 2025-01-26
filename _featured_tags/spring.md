@@ -1,6 +1,6 @@
 ---
 layout: grid
 title: Spring
-slug: spring
+slug: Spring
 no_groups: true
 ---
