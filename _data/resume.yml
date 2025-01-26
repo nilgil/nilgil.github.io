@@ -1,7 +1,7 @@
 basics:
   name: "안영길"
   label: "Software Engineer"
-  picture: /assets/img/resume.jpg
+  picture: /assets/img/resume.png
   email: "nilgil183@gmail.com"
   phone: "010-2083-8745"
   website: "https://nilgil.com"
@@ -18,8 +18,8 @@ work:
     summary: >
     highlights:
       - "2024년도 상,하반기 2회 연속 개발조직 우수사원(1인) 선정"
-      - "오픈소스와 자체 플랫폼의 인증을 통합하기 위한 인증서버 구축 프로젝트 - 백엔드 파트 리딩"
-      - "사내 임직원 근무 기록을 기반으로 근태 및 조직 관리 기능을 제공하는 프로젝트 - 설계 & 개발 & 운영"
+      - "오픈소스와 자체 플랫폼의 인증을 통합하기 위한 인증서버 구축 프로젝트 백엔드 파트 리딩"
+      - "사내 임직원 근무 기록을 기반으로 근태 및 조직 관리 기능을 제공하는 프로젝트 설계 & 개발 & 운영"
 skills:
   - name: "Backend Engineering"
     keywords:

@@ -1,8 +1,6 @@
 ---
 layout: resume
 title: Resume
-description: nilgil's Resume
-hide_description: true
 left_column:
   - work
 #  - education
