@@ -1,13 +1,9 @@
 ---
 layout:      project
-title:       LetEatGo
-date:        2 Dec 2023
+title:       렛잇고
+date:        2023-12-01
 image:
   path:      /assets/img/projects/leteatgo.png
-  srcset:
-    1920w:   /assets/img/projects/leteatgo.png
-    960w:    /assets/img/projects/leteatgo@0,5x.jpg
-    480w:    /assets/img/projects/leteatgo@0,25x.jpg
 caption:     위치 기반 음식점 노출 및 방문 시 메뉴 가격 제공 앱
 description: >
   매장 내 메뉴판 가격을 기준으로 가격 비교를 제공하는 플랫폼입니다. 
@@ -17,5 +13,4 @@ links:
     url:     https://www.leteatgo.co.kr
   - title:   Source
     url:     https://github.com/nilgil/leteatgo
-featured:    true
 ---

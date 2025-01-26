@@ -1,7 +1,7 @@
 ---
 layout:      project
-title:       Withaeng
-date:        2 Dec 2024
+title:       같이행
+date:        2024-12-01
 image:
   path:      /assets/img/projects/withaeng.webp
 caption:     여행 동행 플랫폼
@@ -10,5 +10,4 @@ description: >
 links:
   - title:   Source
     url:     https://github.com/withaeng/withaeng-backend
-featured:    false
 ---
