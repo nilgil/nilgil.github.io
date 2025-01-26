@@ -1,7 +1,7 @@
 ---
 layout: about
 title: About Me
-image: /assets/img/blog/hydejack-9.jpg
+image: /assets/img/logo.png
 permalink: /about
 ---
 
