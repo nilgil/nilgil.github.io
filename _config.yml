@@ -52,8 +52,8 @@ author:
 menu:
   - title:             Blog
     url:               /blog
-  - title:             Projects
-    url:               /projects
+#  - title:             Projects
+#    url:               /projects
   - title:             About
     url:               /about
 
@@ -68,7 +68,7 @@ menu:
 #    url:               /CHANGELOG/
 
 # This text will appear in a `<small>` tag in the footer of every page.
-copyright:             © 2025. All rights reserved.
+copyright:             © 2025 nilgil. All rights reserved.
 
 # Format of the permalinks
 permalink:             /blog/:categories/:title/

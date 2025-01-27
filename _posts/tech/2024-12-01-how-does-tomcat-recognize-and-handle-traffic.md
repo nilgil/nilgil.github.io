@@ -2,7 +2,7 @@
 layout: post
 title: 톰캣은 어떻게 트래픽을 인지하고 처리하는 걸까?
 description: NIO Connector 코드 분석
-image: /assets/img/blog/20241201/tomcat.png
+image: /assets/img/blog/common/tomcat.png
 tags: [ Server ]
 ---
 
