@@ -75,7 +75,7 @@ permalink:             /blog/:categories/:title/
 
 # Pagination configuration (used by the `blog` layout)
 paginate:              10
-paginate_path:         /:num/
+paginate_path:         /page-:num/
 
 
 # Theme
@@ -145,6 +145,7 @@ defaults:
       type:            posts
     values:
       comments:        true
+      applause_button: true
 
   # `jekyll-seo-tag` will mark collection outputs as `BlogPosting`,
   # but we want them to be `WebPage`s:
@@ -419,3 +420,20 @@ share-links-active:
   x: true
   facebook: true
   linkedin: true
+
+comments:
+  provider: giscus
+
+giscus:
+  repo: "nilgil/nilgil.github.io"
+  repo-id: "R_kgDONuG-Kw"
+  category: "Announcements"
+  category-id: "DIC_kwDONuG-K84CmYEI"
+  mapping: "pathname"
+  strict: "0"
+  reaction-enabled: "1"
+  data-emit-metadata: "0"
+  input-position: "bottom"
+  theme: "preferred_color_scheme"
+  data-lang: "ko"
+  crossorigin: "anonymous"
