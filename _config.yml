@@ -420,20 +420,3 @@ share-links-active:
   x: true
   facebook: true
   linkedin: true
-
-comments:
-  provider: giscus
-
-giscus:
-  repo: "nilgil/nilgil.github.io"
-  repo-id: "R_kgDONuG-Kw"
-  category: "Announcements"
-  category-id: "DIC_kwDONuG-K84CmYEI"
-  mapping: "pathname"
-  strict: "0"
-  reaction-enabled: "1"
-  data-emit-metadata: "0"
-  input-position: "bottom"
-  theme: "preferred_color_scheme"
-  data-lang: "ko"
-  crossorigin: "anonymous"
