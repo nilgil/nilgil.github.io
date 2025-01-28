@@ -1,11 +1,10 @@
 ---
 layout: home
-title: nilgil
+title: Hello 👋
 image: /assets/img/blog/hydejack-9.jpg
 logo: <img src="/assets/img/logo.png"/>
 description: >
-  A boutique Jekyll theme for hackers, nerds, and academics,
-  with a focus on personal sites that are meant to impress.
+  nilgil's space for recording IT
 hide_description: true
 selected_posts:
   - _posts/tech/2025-01-18-spring-http-transfer-method-changes.md
