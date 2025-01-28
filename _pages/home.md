@@ -9,11 +9,11 @@ hide_description: true
 selected_posts:
   - _posts/tech/2025-01-18-spring-http-transfer-method-changes.md
   - _posts/tech/2024-12-01-how-does-tomcat-recognize-and-handle-traffic.md
-posts_page: /blog
+posts_page: /blog/
 selected_projects:
   - _projects/leteatgo.md
   - _projects/withaeng.md
-projects_page: /projects
+projects_page: /projects/
 permalink: /
 ---
 
