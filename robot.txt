@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /
+Allow: /$
+Allow: /blog/
+Allow: /sitemap.xml$
+Sitemap: https://nilgil.com/sitemap.xml
