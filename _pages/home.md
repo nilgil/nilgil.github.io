@@ -8,7 +8,7 @@ description: >
   with a focus on personal sites that are meant to impress.
 hide_description: true
 selected_posts:
-  - _posts/tech/2025-01-18-transmission-method-differences-for-rest-client.md
+  - _posts/tech/2025-01-18-spring-http-transfer-method-changes.md
   - _posts/tech/2024-12-01-how-does-tomcat-recognize-and-handle-traffic.md
 posts_page: /blog
 selected_projects:
