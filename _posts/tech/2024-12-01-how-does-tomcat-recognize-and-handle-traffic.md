@@ -6,7 +6,7 @@ description: >
   Acceptor, Poller, Executor 등 핵심 컴포넌트들의 동작 원리와 소켓 통신 과정을 심층적으로 살펴봅니다.
 image: /assets/img/blog/common/tomcat.png
 category: Tech
-tags: [ Server, Tomcat, Traffic, Deep-Dive ]
+tags: [ Server ]
 ---
 
 * toc

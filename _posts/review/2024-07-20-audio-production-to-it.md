@@ -5,9 +5,12 @@ description: >
   레코딩 엔지니어에서 백엔드 개발자로 전향한 이야기. 새로운 도전을 시작하게 된 계기와 앞으로의 포부
 image: /assets/img/blog/20240720/studio.jpg
 category: Review
-tags: [ Audio-Production, Recording-Engineer, Backend-Developer, Studio-Recording, 음향, 전직, 전향, 개발자, 직업전환, 레코딩 엔지니어 ]
+tags: [ Audio-Production ]
 hide_image: true
 ---
+
+* toc
+{:toc}
 
 블로그에 어떤 글을 써볼까 고민하던 중 제가 IT 업계에 발 들이기 전 어떤 사람이었는지 보여주고 싶다는 생각이 들었습니다.
 nilgil의 "내가 왕년에는 말이야~" 시작합니다.
