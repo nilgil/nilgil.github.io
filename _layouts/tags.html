@@ -4,7 +4,7 @@ layout: page
 <div>
     <div>
         {% for tag in site.featured_tags %}
-        <a href="/tags/{{ tag.title }}"><h3>{{tag.title}}</h3></a>
+        <a href="/tags/{{ tag.title | slugify }}"><h3>{{tag.title}}</h3></a>
         {% assign tag_posts = site.tags[tag.title] %}
         <table>
             <tr>

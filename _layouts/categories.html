@@ -4,9 +4,7 @@ layout: page
 <div>
     <div>
         {% for category in site.categories %}
-        <a href="{{ category[0] | slugify }}">
-            <h3 id="{{ category[0] | slugify }}">{{ category | first | capitalize }}</h3>
-        </a>
+        <a href="{{ category[0] | slugify }}"><h3>{{ category | first | capitalize }}</h3></a>
         <table>
             <tr>
                 <th>About</th>
@@ -16,7 +14,7 @@ layout: page
             {% for post in category[1] %}
             <tr>
                 <td>
-                    <a href="/tags/{{ post.tags.first }}">
+                    <a href="/tags/{{ post.tags.first | slugify }}">
                         {% if post.tags.size> 0 %}
                         {{ post.tags.first }}
                         {% endif %}
