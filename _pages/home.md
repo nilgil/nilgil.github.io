@@ -23,10 +23,6 @@ My name is **Young-gil An**, and people call me **nilgil**.
 
 <!--posts-->
 
-## Featured Projects
-
-<!--projects-->
-
 ## About Me
 
 <!--author-->
