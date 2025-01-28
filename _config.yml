@@ -415,7 +415,4 @@ jekyll_compose:
           url: https://nilgil.com
 
 # Additional
-share-links-active:
-  x: true
-  facebook: true
-  linkedin: true
+google_analytics: G-E6V7Z3ZDLE
