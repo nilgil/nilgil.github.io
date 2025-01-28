@@ -1,9 +1,12 @@
 ---
 layout: post
 title: 톰캣은 어떻게 트래픽을 인지하고 처리하는 걸까?
-description: NIO Connector 코드 분석
+description: >
+  톰캣의 NIO Connector가 어떻게 트래픽을 처리하는지 소스 코드 레벨에서 상세히 분석합니다. 
+  Acceptor, Poller, Executor 등 핵심 컴포넌트들의 동작 원리와 소켓 통신 과정을 심층적으로 살펴봅니다.
 image: /assets/img/blog/common/tomcat.png
-tags: [ Server ]
+category: Tech
+tags: [ Server, Tomcat, Traffic, Deep-Dive ]
 ---
 
 * toc

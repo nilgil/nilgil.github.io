@@ -71,7 +71,7 @@ menu:
 copyright:             © 2025 nilgil. All rights reserved.
 
 # Format of the permalinks
-permalink:             /blog/:categories/:title/
+permalink:             /blog/:title/
 
 # Pagination configuration (used by the `blog` layout)
 paginate:              10
