@@ -5,7 +5,7 @@ description: >
   레코딩 엔지니어에서 백엔드 개발자로 전향한 이야기. 새로운 도전을 시작하게 된 계기와 앞으로의 포부
 image: /assets/img/blog/20240720/studio.jpg
 category: Review
-tags: [ Audio-Production, 음향, 전직, 전향, 개발자, 백엔드, 레코딩 엔지니어 ]
+tags: [ Audio-Production, Recording-Engineer, Backend-Developer, Studio-Recording, 음향, 전직, 전향, 개발자, 직업전환, 레코딩 엔지니어 ]
 hide_image: true
 ---
 
