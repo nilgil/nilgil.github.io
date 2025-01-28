@@ -6,7 +6,6 @@ layout: page
         {% for tag in site.featured_tags %}
         <a href="/tags/{{ tag.title }}"><h3>{{tag.title}}</h3></a>
         {% assign tag_posts = site.tags[tag.title] %}
-        {% for post in tag_posts %}
         <table>
             <tr>
                 <th>Name</th>
@@ -19,7 +18,6 @@ layout: page
             </tr>
             {% endfor %}
         </table>
-        {% endfor %}
         {% endfor %}
     </div>
 </div>
