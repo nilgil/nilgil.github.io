@@ -237,7 +237,7 @@ hydejack:
 
   # Set to `true` when building with the `--lsi` option.
   # The net effect is to use the Jekyll-provided `site.related_posts` variable.
-  use_lsi:             true
+  use_lsi:             false
 
   # When using Google Analytics, set to `true` to display a cookie notice banner.
   # When enabled, no user-related data will be stored until the user gives consent.
