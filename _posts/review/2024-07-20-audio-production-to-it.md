@@ -8,6 +8,7 @@ image: /assets/img/blog/20240720/studio.jpg
 category: Review
 tags: [ Audio-Production ]
 hide_image: true
+hide_description: true
 ---
 
 * toc
