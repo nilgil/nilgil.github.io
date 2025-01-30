@@ -1,7 +1,7 @@
 ---
 layout: home
 title: Hello 👋
-image: /assets/img/blog/hydejack-9.jpg
+image: /assets/img/favicon.ico
 logo: <img src="/assets/img/logo.png"/>
 description: >
   nilgil's space for recording IT
