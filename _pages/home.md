@@ -2,7 +2,6 @@
 layout: home
 title: Hello 👋
 image: /assets/img/favicon.ico
-logo: <img src="/assets/img/logo.png"/>
 description: >
   nilgil's space for recording IT
 hide_description: true
