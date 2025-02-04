@@ -100,7 +100,7 @@ Hypertext Transfer Protocol
     File Data: 43 bytes
 ```
 
-위 두 결과를 비교해 보니 예상하지 못한 다른 부분에서 차이점이 명확히 보였습니다.
+위 두 결과를 비교해 보니 예상하지 못한 부분에서 차이점이 명확히 보였습니다.
 
 바로 Chunked Transfer Encoding 입니다. 
 실패했던 케이스는 요청 본문이 Streaming 방식으로 쪼개어 전송된 경우였고,
