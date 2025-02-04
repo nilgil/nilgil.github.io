@@ -37,7 +37,8 @@ public void callApi(TestObj testObj) {
 }
 ```
 
-문제 해결을 위해 여러 시도를 해보던 중, Object를 직접 JSON String으로 직렬화하여 전송했을 때 정상적으로 동작하는 것을 확인했습니다.
+Postman으로 요청을 보냈을 때 정상적으로 응답을 받았기에 코드 레벨에서 문제 해결을 위한 여러 시도를 해보았습니다.
+그러다 Object를 직접 JSON String으로 직렬화하여 전송했을 때 정상적으로 동작하는 것을 확인했습니다.
 
 ```java
 // 정상 동작하는 코드
@@ -53,7 +54,8 @@ public void callApi(TestObj testObj) {
 
 ## 패킷 확인
 
-실제 전송되는 패킷을보면 두 방식 간의 차이점을 명확하게 파악할 수 있을 것 같아 Wireshark를 사용해 패킷을 캡쳐해보았습니다.
+저는 위와 같은 이유로 'RestClient 내부적으로 Object 직렬화가 잘못되고 있는 건가?' 라는 의심을 하게 되었습니다. 
+그래서 Object가 어떻게 직렬화되어 외부로 보내지고 있는지 두 눈으로 직접 확인해 보고자 Wireshark로 패킷을 캡쳐해보았습니다.
 
 - 실패 케이스의 HTTP Message
 
@@ -98,9 +100,9 @@ Hypertext Transfer Protocol
     File Data: 43 bytes
 ```
 
-위 두 결과를 비교해보니 차이점이 명확해졌습니다.
+위 두 결과를 비교해 보니 예상하지 못한 다른 부분에서 차이점이 명확히 보였습니다.
 
-문제의 원인은 Chunked Transfer Encoding 이었습니다.
+바로 Chunked Transfer Encoding 입니다. 
 실패했던 케이스는 요청 본문이 Streaming 방식으로 쪼개어 전송된 경우였고,
 이를 통해 'API 서버가 Chunked Transfer Encoding을 지원하지 않아 발생한 문제'로 원인을 특정할 수 있었습니다.
 
