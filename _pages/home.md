@@ -3,6 +3,7 @@ layout: home
 title: Hello 👋
 description: >
   nilgil's space for recording IT
+image: /assets/img/logo.png
 hide_description: true
 selected_posts:
   - _posts/tech/2025-01-18-spring-http-transfer-method-changes.md
