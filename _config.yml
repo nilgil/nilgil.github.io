@@ -37,8 +37,8 @@ keywords:              [Development, Backend, Web, Java, Spring]
 # A (square) logo for your site.
 # If provided, it will be shown at the top of the sidebar.
 # It also used by the `jekyll-seo-tag` plugin.
-favicon:               /assets/img/favicon.png
-apple_touch_icon:      /assets/img/favicon.png
+favicon:               /assets/img/favicon-144x144.png
+apple_touch_icon:      /assets/img/favicon-144x144.png
 logo:                  /assets/img/favicon.png
 
 # This should be the same author as first entry in `_data/authors.yml`.
