@@ -1,6 +1,5 @@
 User-agent: *
-Disallow: /
-Allow: /$
-Allow: /blog/
-Allow: /sitemap.xml$
+Allow: /
+Disallow: /projects/
+Disallow: /resume
 Sitemap: https://nilgil.com/sitemap.xml
