@@ -6,11 +6,11 @@ description: >
   데이터 타입에 따른 전송 방식 차이와 Chunked Transfer Encoding 관련 문제 해결 방법을 알아봅니다.
 image: /assets/img/blog/common/spring.png
 category: Tech
-tags: [ Spring ]
+tags: [Spring]
 ---
 
-* toc
-{:toc}
+- toc
+  {:toc}
 
 ## 요약
 
@@ -54,7 +54,7 @@ public void callApi(TestObj testObj) {
 
 ## 패킷 확인
 
-저는 위와 같은 이유로 'RestClient 내부적으로 Object 직렬화가 잘못되고 있는 건가?' 라는 의심을 하게 되었습니다. 
+저는 위와 같은 이유로 'RestClient 내부적으로 Object 직렬화가 잘못되고 있는 건가?' 라는 의심을 하게 되었습니다.
 그래서 Object가 어떻게 직렬화되어 외부로 보내지고 있는지 두 눈으로 직접 확인해 보고자 Wireshark로 패킷을 캡쳐해보았습니다.
 
 - 실패 케이스의 HTTP Message
@@ -102,7 +102,7 @@ Hypertext Transfer Protocol
 
 위 두 결과를 비교해 보니 예상하지 못한 부분에서 차이점이 명확히 보였습니다.
 
-바로 Chunked Transfer Encoding 입니다. 
+바로 Chunked Transfer Encoding 입니다.
 실패했던 케이스는 요청 본문이 Streaming 방식으로 쪼개어 전송된 경우였고,
 이를 통해 'API 측에서 Chunked Transfer Encoding을 지원하지 않아 발생한 문제'로 원인을 특정할 수 있었습니다.
 
@@ -273,7 +273,7 @@ public RestClient noChunkedClient() {
     return RestClient.builder()
         .messageConverters(converters -> {
             converters.removeIf(converter -> converter instanceof MappingJackson2HttpMessageConverter);
-            converters.add(new ContentLengthJsonConverter());
+            converters.add(new FixedLengthJsonMessageConverter());
         }).build();
 }
 ```
@@ -288,9 +288,9 @@ Release Note에서는 버퍼링이 필요한 경우 이 팩토리를 사용하�
 
 ## 결론
 
-외부 시스템과의 통신을 디버깅하는 과정에서 너무 코드 레벨에만 집중하여 많은 시간을 소모했던 것 같습니다. 
-이를 통해 문제 해결 시 코드에만 국한되지 않고 더 넓은 관점에서 접근해야 해야겠다는 생각을 하게 되었습니다. 
-또한 API를 호출하는 과정에서 제가 직접 제어하는 영역은 정말 좁다는 것을 느꼈고, 
+외부 시스템과의 통신을 디버깅하는 과정에서 너무 코드 레벨에만 집중하여 많은 시간을 소모했던 것 같습니다.
+이를 통해 문제 해결 시 코드에만 국한되지 않고 더 넓은 관점에서 접근해야 해야겠다는 생각을 하게 되었습니다.
+또한 API를 호출하는 과정에서 제가 직접 제어하는 영역은 정말 좁다는 것을 느꼈고,
 내부 동작 원리에 대한 깊은 이해가 신속한 문제 해결의 핵심이 된다는 것을 알게 되었습니다.
 
 ## 참고 자료
