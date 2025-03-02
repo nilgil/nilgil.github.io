@@ -2,7 +2,7 @@
 layout: post
 title: 2024년도 개발자로서의 회고
 description: >
-  
+  2024년 개발자로서의 성과와 한계를 돌아보고, 실력 있는 개발자가 되기 위해 필요한 근본적인 변화와 2025년 목표를 담은 회고록
 image: /assets/img/blog/20250107/award.png
 category: Review
 tags: [ IT ]
