@@ -382,6 +382,7 @@ Hibernate가 제시하는 이러한 접근 방식은 일관된 시간 처리를 
 이처럼 기존의 방식을 고수하기보다 새로운 접근 방식을 수용하는 것이 더 나은 해결책이 될 수 있습니다.
 
 ---
+
 ## 느낀 점
 
 이전 [Spring RestClient/RestTemplate 요청이 실패하는 이유](https://nilgil.com/blog/spring-http-transfer-method-changes/)
