@@ -195,15 +195,11 @@ public enum TimeZoneStorageStrategy {
 ```
 
 - `NATIVE`
-    - 데이터베이스에 시간대 정보를 온전히 저장합니다.
+    - `WITH TIME ZONE` 타입에 시간대 정보를 온전히 저장합니다.
     - 데이터베이스 `Dialect`의 `TimeZoneSupport` 값이 `NATIVE`가 아닌 경우 실행 시점에 구성 오류를 반환합니다.
 - `COLUMN` : 시간대 정보를 별도의 열에 저장합니다.
-- `NORMALIZE`
-    - 시간대 정보를 저장하지 않습니다.
-    - JDBC_TIME_ZONE 설정 또는 시스템 타임존으로 정규화하여 타임스탬프를 저장합니다.
-- `NORMALIZE_UTC`
-    - 시간대 정보를 저장하지 않습니다.
-    - UTC로 정규화하여 타임스탬프를 저장합니다.
+- `NORMALIZE` : `JDBC_TIME_ZONE` 설정 또는 시스템 타임존으로 정규화하여 타임스탬프를 저장합니다.
+- `NORMALIZE_UTC` : UTC로 정규화하여 타임스탬프를 저장합니다.
 
 이러한 핵심이 되는 `TimeZoneStorageStrategy`를 선택하기 위해 `TimeZoneSupport`, `TimeZoneStorageType`와 같은 열거형 타입들이 사용됩니다.
 
@@ -211,7 +207,7 @@ public enum TimeZoneStorageStrategy {
 
 ## TimeZoneSupport
 
-이 값은 데이터베이스가 타임존을 지원하는 정도를 나타내며, 총 3가지 값이 존재합니다.
+이 값은 데이터베이스가 `WITH TIME ZONE` 타입을 지원하는 정도를 나타내며, 총 3가지 값이 존재합니다.
 
 ```java
 package org.hibernate.dialect;
@@ -225,9 +221,9 @@ public enum TimeZoneSupport {
 
 다음 순서대로 지원도가 높음을 의미합니다.
 
-- `NATIVE` : 데이터베이스에서 타임존 정보를 함께 저장 (Oracle, H2, ...)
-- `NORMALIZE` : 특정 시간대로 정규화하여 타임스탬프만을 기록 (PostgreSQL, ...)
-- `NONE` : `TIMESTAMP WITH TIME ZONE` 타입을 지원하지 않음 (MySQL, MariaDB, ...)
+- `NATIVE` : `WITH TIME ZONE` 타입에 타임존 정보를 함께 저장 (Oracle, H2, ...)
+- `NORMALIZE` : `WITH TIME ZONE` 타입에 특정 시간대로 정규화하여 저장 (PostgreSQL, ...)
+- `NONE` : `WITH TIME ZONE` 타입을 지원하지 않음 (MySQL, MariaDB, ...)
 
 각 데이터베이스 Dialect 구현체마다 이 값을 반환하는 메서드가 있습니다. `PostgreSQLDialect`의 경우 다음과 같이 `NORMALIZE` 값을 반환합니다.
 
