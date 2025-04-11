@@ -26,6 +26,7 @@ nilgil:
   social:
     # twitter:         <username>
     github:          nilgil
+    linkedin:        nilgil
     email:           nilgil183@gmail.com
     rss:             https://nilgil.com/feed.xml
     # facebook:        <username>
@@ -55,7 +56,6 @@ nilgil:
     # npm:             <username>
     # hackernews:      <username>
     # trello:          <firstnamelastname>
-    # linkedin:        <firstname-lastname-string>
     # xing:            <firstname_lastname_counter>
     # blogger:         <number>
     # delicious:       <username>
