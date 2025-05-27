@@ -42,11 +42,11 @@ hide_description: true
 레코딩 엔지니어는 일을 할 수 있는 스튜디오가 많지 않고, 스튜디오마다 한, 두 명씩만 직원을 고용하기에 음향 업계 내에서도 취업하기 힘든 직업으로 손꼽힙니다.
 정말 이름만 대도 어디의 누군지 알 정도로 업계가 좁습니다.
 
-![](/assets/img/blog/20240720/tone1.jpg){:style="width:39.5%"}
-![](/assets/img/blog/20240720/tone2.jpg){:style="width:56.5%"}
+![](/assets/img/blog/20240720/tone4.jpeg){:style="width:41.2%"}
+![](/assets/img/blog/20240720/tone1.jpg){:style="width:54.8%"}
 
 {:.figcaption}
-톤 스튜디오 제주
+톤 스튜디오 서울/제주
 
 저는 그중에서도 많은 사람들이 일하고 싶어하는 업계 탑급 스튜디오에서 메이저 가수들과 작업을 해왔습니다.
 
