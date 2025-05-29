@@ -14,7 +14,7 @@ tags: [Spring]
 
 ## 요약
 
-Spring 6.1부터 RestTemplate(이하 생략)과 RestClient의 요청 본문 처리 방식이 데이터 타입에 따라 다르게 변경되었습니다.
+Spring 6.1부터 RestTemplate(이하 생략)과 RestClient의 요청 본문 처리 방식이 데이터 타입에 따라 다르게 동작하도록 변경되었습니다.
 `byte[]`나 `String` 타입은 기존처럼 Content-Length 헤더와 함께 전송되지만,
 `Object` 타입의 경우 Chunked Transfer Encoding을 사용하여 Streaming 방식으로 전송됩니다.
 이러한 변경으로 인해 Chunked Transfer Encoding을 지원하지 않는 일부 API에서 문제가 발생할 수 있어 주의가 필요합니다.
