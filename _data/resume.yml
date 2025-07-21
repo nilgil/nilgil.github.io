@@ -3,44 +3,63 @@ basics:
   label: "Software Engineer"
   picture: /assets/img/resume.png
   email: "nilgil183@gmail.com"
-  phone: "010-2083-8745"
-  website: "https://nilgil.com"
-  description: >
-  summary: >
   location:
     countryCode: "KR"
     region: "Seoul"
+  summary: >
+    Java & Spring 기반의 4년 차 서버 개발자로,<br>
+    기업의 HR 관리 플랫폼 및 네트워크 장비 기능 확장을 위한 미들웨어를 주로 개발해왔습니다.<br><br>
+    또한 Kafka 기반 알림 시스템 구축 경험을 통해 대용량 트래픽 처리 기반을 쌓았으며,<br>
+    Kubernetes 환경에서의 CI/CD, 백업 자동화, 모니터링 시스템 개선 경험으로 인프라에 친화적입니다.<br><br>
+    책임감과 실질적인 기여를 중시하며, 이러한 가치관으로 이끌어낸 성과들이<br>
+    ‘2024년 상·하반기 2회 연속 우수사원 선정’이라는 결과로 이어진 경험이 있습니다.
 work:
   - company: "오픈베이스"
-    position: "Software Developer"
+    position: "Software Engineer"
     website: "https://openbase.co.kr"
     startDate: "2022-03-07"
     summary: >
+      HR 플랫폼, Kafka 기반 알림 시스템, 네트워크 장비 기능 확장 미들웨어 등<br>
+      다수의 프로젝트를 설계부터 개발, 배포까지 주도하였습니다.
     highlights:
-      - "2024년도 상,하반기 2회 연속 개발조직 우수사원(1인) 선정"
-      - "오픈소스와 자체 플랫폼의 인증을 통합하기 위한 인증서버 구축 프로젝트 백엔드 파트 리딩"
-      - "사내 임직원 근무 기록을 기반으로 근태 및 조직 관리 기능을 제공하는 프로젝트 설계 & 개발 & 운영"
+      - "2024년도 상,하반기 2회 연속 개발 조직 우수사원(20명 중 1명) 선정"
+      - "서비스 특성을 고려한 캐시 전략을 설계하여 데이터베이스 부하를 최소화하고 조회 성능을 최적화"
+      - "Key-based Lock을 활용하여 동시성으로 인해 생성 검증이 무력화되는 문제를 해결"
+      - "Kubernetes의 Rolling Update 전략을 활용하여 약 20초의 서비스 다운타임을 제거"
+      - "Kafka를 활용한 이벤트 기반 아키텍처 설계로 확장성 높은 비동기 알림 시스템 구축"
+      - "Redis를 글로벌 캐시로 활용해 메시지 서명 검증을 위한 비밀키 조회 병목을 최적화"
+      - "반복적인 개발 패턴을 표준화하여 신규 프로젝트 생산성을 높이는 경량 프레임워크 개발"
+      - "패킷 분석으로 네트워크 장비 API의 Chunked Transfer 미지원 이슈 트러블슈팅"
+      - "Hibernate 소스 코드 분석을 통해 버전 변경으로 인한 타임존 고정 이슈 트러블슈팅"
+education:
+  - institution: "F-Lab"
+    area: "멘토링"
+    startDate: "2025-05-01"
+    courses:
+      - "저의 가치를 끌어올리기 위해 열심히 배우고, 공부하고, 피드백 받는 과정을 반복하고 있습니다."
+  - institution: "Nextstep"
+    area: "도메인 주도 설계의 사실과 오해 2기"
+    startDate: "2024-05-01"
+    endDate: "2024-05-01"
+    courses:
+      - "DDD의 등장 배경을 이해하고, 복잡한 도메인 문제를 해결하기 위한 전략 및 모델 설계 흐름을 경험할 수 있었습니다."
+  - institution: "Nextstep"
+    area: "TDD, 클린 코드 with Java 16기"
+    startDate: "2023-04-01"
+    endDate: "2023-06-01"
+    courses:
+      - "객체지향, 클린 코드, TDD, 리팩토링 등 좋은 코드를 만들기 위한 실무적인 개발 역량 습득하였습니다."
 skills:
-  - name: "Backend Engineering"
+  - name: "Backend"
     keywords:
       - "Java"
       - "Spring"
-      - "MySQL"
       - "JPA"
-      - "Spring Security"
-  - name: "DevOps"
+      - "PostgreSQL"
+      - "Gradle"
+  - name: "Infra"
     keywords:
       - "Docker"
       - "Kubernetes"
-      - "AWS"
-interests:
-  - name: "Sports"
-    keywords:
-      - "축구"
-      - "테니스"
-      - "스노우보드"
-  - name: "Music"
-    keywords:
-      - "이적"
-      - "잔나비"
-      - "브라운 아이드 소울"
+      - "Kafka"
+      - "Linux"
