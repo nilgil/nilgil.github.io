@@ -1,11 +1,22 @@
-{% if jekyll.environment == 'production' %}
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-E6V7Z3ZDLE"></script>
-<script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
+{%- comment -%}
+  분석은 Cloudflare Web Analytics 로 옮겼다 (2026-08-29).
 
-    gtag('config', 'G-E6V7Z3ZDLE');
-</script>
-{% endif %}
+  **여기에 스크립트가 없는 것이 정상이다.** nilgil.com 은 Cloudflare 프록시 뒤에
+  있어서, Web Analytics 를 automatic setup 으로 켜면 beacon 을 엣지에서 주입한다.
+  사이트 코드에 넣을 것이 없다.
+
+  왜 옮겼나:
+    - 쿠키를 안 쓴다 → 동의 배너가 필요 없다 (`_config.yml` 의 `cookies_banner`)
+    - 방문자에게 서드파티 스크립트를 하나 덜 받게 한다
+    - 개인 블로그에 필요한 것(페이지뷰·유입 경로·Core Web Vitals)은 그대로 나온다
+
+  잃은 것: 사용자 단위 추적 · 이벤트 · 전환 퍼널 · **GA 의 과거 데이터**.
+  과거 데이터는 GA 에서 따로 내보내지 않으면 넘어오지 않는다.
+
+  ⚠️ Search Console 은 이것과 별개다. `nilgil.com` 의
+     `google-site-verification` TXT 레코드는 **그대로 둔다** — 검색 색인과
+     sitemap 은 Cloudflare 가 대체하지 않는다.
+
+  automatic setup 대신 코드에 두고 싶으면, Cloudflare 대시보드가 주는 beacon
+  <script> 한 줄을 이 파일에 넣으면 된다.
+{%- endcomment -%}
