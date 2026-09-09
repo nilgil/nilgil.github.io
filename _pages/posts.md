@@ -1,6 +1,6 @@
 ---
 layout: grid
-title: Blog
+title: Posts
 permalink: /posts/
 redirect_from:
   - /blog/
