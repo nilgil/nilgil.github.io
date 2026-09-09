@@ -8,6 +8,8 @@ category: Review
 tags: [ IT ]
 hide_image: true
 hide_description: true
+redirect_from:
+  - /blog/review-of-2024-as-a-developer/
 ---
 
 * toc

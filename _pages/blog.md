@@ -1,6 +1,8 @@
 ---
 layout: grid
 title: Blog
-permalink: /blog/
+permalink: /posts/
+redirect_from:
+  - /blog/
 no_groups: true
 ---

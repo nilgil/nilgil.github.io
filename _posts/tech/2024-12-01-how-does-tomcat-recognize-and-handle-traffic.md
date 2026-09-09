@@ -7,6 +7,8 @@ description: >
 image: /assets/img/blog/common/tomcat.png
 category: Tech
 tags: [ Server ]
+redirect_from:
+  - /blog/how-does-tomcat-recognize-and-handle-traffic/
 ---
 
 * toc

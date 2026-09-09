@@ -7,6 +7,8 @@ description: >
 image: /assets/img/blog/common/spring.png
 category: Tech
 tags: [Spring]
+redirect_from:
+  - /blog/spring-http-transfer-method-changes/
 ---
 
 - toc

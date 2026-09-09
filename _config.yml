@@ -52,7 +52,7 @@ author:
 # Add links to the sidebar.
 menu:
   - title:             Blog
-    url:               /blog
+    url:               /posts
 #  - title:             Projects
 #    url:               /projects
   - title:             About
@@ -72,7 +72,7 @@ menu:
 copyright:             © 2025 nilgil. All rights reserved.
 
 # Format of the permalinks
-permalink:             /blog/:title/
+permalink:             /posts/:title/
 
 # Pagination configuration (used by the `blog` layout)
 paginate:              10
@@ -288,7 +288,7 @@ hydejack:
 
 collections:
   featured_categories:
-    permalink:         /blog/:name/
+    permalink:         /posts/:name/
     output:            true
 
   featured_tags:

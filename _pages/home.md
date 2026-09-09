@@ -10,7 +10,7 @@ selected_posts:
   - _posts/tech/2025-01-18-spring-http-transfer-method-changes.md
   - _posts/review/2025-01-07-review-of-2024-as-a-developer.md
   - _posts/tech/2024-12-01-how-does-tomcat-recognize-and-handle-traffic.md
-posts_page: /blog/
+posts_page: /posts/
 selected_projects:
   - _projects/leteatgo.md
   - _projects/withaeng.md

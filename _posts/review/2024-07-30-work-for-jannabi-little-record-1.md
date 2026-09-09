@@ -7,6 +7,8 @@ description: >
 image: /assets/img/blog/20240730/record.png
 category: Review
 tags: [ Audio-Production ]
+redirect_from:
+  - /blog/work-for-jannabi-little-record-1/
 ---
 
 * toc

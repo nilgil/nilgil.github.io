@@ -6,6 +6,8 @@ description: >
 image: /assets/img/blog/common/hibernate.png
 category: Tech
 tags: [ Hibernate ]
+redirect_from:
+  - /blog/hibernate-default-timezone-strategy/
 ---
 
 - toc
@@ -382,7 +384,7 @@ Hibernate가 제시하는 접근 방식의 핵심은 '시스템 타임존에 대
 ## 느낀 점
 '기존과 달라졌으니 원래대로 돌려놓자'라는 단순한 접근보다는 '이러한 변경의 의도는 무엇일까?'라는 질문을 통해 더 나은 시스템을 위한 고민으로 발전시킬 수 있었던 유익한 경험이었습니다.
 
-[Spring RestClient/RestTemplate 요청이 실패하는 이유](https://nilgil.com/blog/spring-http-transfer-method-changes/)를 경험했던 것처럼, 
+[Spring RestClient/RestTemplate 요청이 실패하는 이유](https://blog.nilgil.com/posts/spring-http-transfer-method-changes/)를 경험했던 것처럼, 
 외부 라이브러리의 변경사항은 예상치 못한 문제를 일으킬 수 있음을 다시 한 번 실감했습니다. 그리고 이를 통해 테스트 코드가 얼마나 중요한지도 다시 한 번 깨닫게 되었습니다.
   
 이번 이슈와 관련하여 이미 여러 글들이 포스팅되어 있어 간단히 해결할 수도 있었습니다. 

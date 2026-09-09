@@ -9,6 +9,8 @@ category: Review
 tags: [ Audio-Production ]
 hide_image: true
 hide_description: true
+redirect_from:
+  - /blog/audio-production-to-it/
 ---
 
 * toc
